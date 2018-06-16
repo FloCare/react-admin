@@ -10,6 +10,9 @@ import { showNotification } from '../actions/notificationActions';
 function* handleResponse({ type, requestPayload, payload }) {
     switch (type) {
         case CRUD_GET_ONE_SUCCESS:
+            console.log('IN ERROR');
+            console.log(payload);
+            console.log(requestPayload);
             if (
                 !('id' in payload.data) ||
                 payload.data.id != requestPayload.id
